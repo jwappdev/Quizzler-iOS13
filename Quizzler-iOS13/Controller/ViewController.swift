@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
         guard let userAnswer = sender.currentTitle else { return }
         let userGotItRight = quizBrain.checkAnswer(userAnswer)
-        //updateUI() // to set new score
+        updateUI() // to set new score
         
         userGotItRight == true ? (sender.backgroundColor = .green) : (sender.backgroundColor = .red)
         quizBrain.switchNextQuestion()
